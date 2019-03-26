@@ -1,0 +1,15 @@
+<html>
+  <head>
+  </head>
+  <body>
+    <h2>Add a Trip</h2>
+    <form action="/addtrip" method="POST">
+      <input type="text" name="destination" placeholder="Enter destination" />
+      <input type="text" name="departure" placeholder="Enter Departure Date" />
+      <input type="text" name="return" placeholder="Enter Return Date" />
+      <input type="text" name="image" placeholder="Enter URL of Trip Image" />
+      <input type="hidden" name="tripID" value="tripID" />
+      <button type="submit">Save</button>
+    </form>
+  </body>
+</html>

@@ -1,0 +1,27 @@
+<html>
+  <head>
+  </head>
+  <body>
+    <h2>Trips</h2>
+    <form action="/returnaddtrip" method="POST">
+      <button type="submit" value="returnaddtrip">Add a Trip</button>
+    </form>
+    <ul>
+      {{#tripList}}
+      <li>
+        <img src={{image}}></img>
+        <h3>{{destination}}</h3>
+        <p>{{departure}} - {{return}}</p>
+        <form action="/deletetrip" method="POST">
+          <input type="hidden" value={{tripID}} name="tripID" />
+          <button type="submit" value="Delete">Delete</button>
+        </form>
+      </li>
+      {{/tripList}}
+
+      {{^tripList}}
+        <p>Sorry no trips found.</p>
+      {{/tripList}}
+    </ul>
+  </body>
+</html>
