@@ -2,26 +2,25 @@
   <head>
   </head>
   <body>
-    <h2>Trips</h2>
-    <form action="/returnaddtrip" method="POST">
-      <button type="submit" value="returnaddtrip">Add a Trip</button>
-    </form>
+    {{> menu}}
+    <h2>Hello {{username}}!</h2>
+    <h3>Here is a list of your current trips:</h3>
     <ul>
-      {{#tripList}}
+      {{#trips}}
       <li>
         <img src={{image}}></img>
-        <h3>{{destination}}</h3>
+        <h4>{{destination}}</h4>
         <p>{{departure}} - {{return}}</p>
         <form action="/deletetrip" method="POST">
           <input type="hidden" value={{tripID}} name="tripID" />
           <button type="submit" value="Delete">Delete</button>
         </form>
       </li>
-      {{/tripList}}
+      {{/trips}}
 
-      {{^tripList}}
+      {{^trips}}
         <p>Sorry no trips found.</p>
-      {{/tripList}}
+      {{/trips}}
     </ul>
   </body>
 </html>

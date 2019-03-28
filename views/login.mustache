@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  </head>
+  <body>
+    <h2>Register</h2>
+    <form action="/register" method="POST">
+      <input type="text" name="username" placeholder="Enter username" />
+      <input type="password" name="password" placeholder="Enter Password">
+      <button type="submit" name="register">Register</button>
+    </form>
+    {{registeredMessage}}
+
+    <h2>Login</h2>
+    <form action="/login" method="POST">
+      <input type="text" name="username" placeholder="Enter Username" />
+      <input type="password" name="password" placeholder="Enter Password">
+      <button type="submit" name="login">Login</button>
+    </form>
+    {{invalidMessage}}
+  </body>
+</html>

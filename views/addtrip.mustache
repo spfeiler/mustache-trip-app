@@ -2,7 +2,8 @@
   <head>
   </head>
   <body>
-    <h2>Add a Trip</h2>
+    {{> menu}}
+    <h2>Add New Trip:</h2>
     <form action="/addtrip" method="POST">
       <input type="text" name="destination" placeholder="Enter destination" />
       <input type="text" name="departure" placeholder="Enter Departure Date" />
